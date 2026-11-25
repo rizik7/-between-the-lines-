@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Between the Lines</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+
+      <a class="logo" href="#">
+        <img src="img/logo.png" alt="Between the Lines — логотип книгарні" width="48" height="40">
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+
+      <label class="burger" for="nav-toggle" aria-label="Відкрити меню">
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#new-books">Новинки</a></li>
+          <li><a href="#categories">Книги</a></li>
+          <li><a href="#recommend">Рекомендації</a></li>
+          <li><a href="#promo">Акції</a></li>
+          <li><a href="#reviews">Відгуки</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__icons">
+        <a href="#cart" aria-label="Кошик">
+          <img src="img/korzuna.png" alt="" width="24" height="24">
+        </a>
+        <a href="#login" aria-label="Увійти">
+          <img src="img/vhid.png" alt="" width="24" height="24">
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Фото на першому екрані: БЕЗ loading="lazy" (інакше завантажиться із затримкою) -->
+    <section class="hero" id="hero">
+      <div class="hero__text">
+        <h1 class="hero__title">
+          КОЖНА КНИГА —<br>
+          <strong>ШАНС ЗАКОХАТИСЯ ЗНОВУ</strong>
+        </h1>
+      </div>
+
+      <div class="hero__photo">
+        <img src="img/zadnik.jfif" alt="Дівчина читає книгу біля вікна кав'ярні" width="1024" height="572">
+      </div>
+    </section>
+
+    <!-- Перший ряд карток: теж без lazy, бо на великих екранах він видно одразу -->
+    <section class="new-books" id="new-books">
+      <div class="container">
+
+        <p class="chapter-label">Глава 1</p>
+        <h2 class="section-title">Нові історії</h2>
+
+        <div class="cards">
+
+          <article class="card">
+            <img class="card__badge" src="img/star.png" alt="" width="32" height="30">
+            <img class="card__badge card__badge--category" src="img/kvitka.png" alt="" width="32" height="30">
+            <img class="card__cover" src="img/koxana_slova.png" alt="Обкладинка книги «Кохання та інші слова»" width="1024" height="1590">
+
+            <div class="card__info">
+              <h3 class="card__title">Кохання та інші слова</h3>
+              <p class="card__author">Крістіан Лорен</p>
+              <p class="card__price">449 грн</p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__badge" src="img/star.png" alt="" width="32" height="30">
+            <img class="card__badge card__badge--category" src="img/kvitka.png" alt="" width="32" height="30">
+            <img class="card__cover" src="img/y_vidpustzi.jpg" alt="Обкладинка книги «Люди, яких ми зустрічаємо у відпустці»" width="557" height="840">
+
+            <div class="card__info">
+              <h3 class="card__title">Люди, яких ми зустрічаємо у відпустці</h3>
+              <p class="card__author">Емілі Генрі</p>
+              <p class="card__price">550 грн</p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__badge" src="img/star.png" alt="" width="32" height="30">
+            <img class="card__badge card__badge--category" src="img/vohnuk.png" alt="" width="23" height="30">
+            <img class="card__cover" src="img/doskonalosti.jpg" alt="Обкладинка книги «Усі твої досконалості»" width="564" height="840">
+
+            <div class="card__info">
+              <h3 class="card__title">Усі твої досконалості</h3>
+              <p class="card__author">Коллін Гувер</p>
+              <p class="card__price">430 грн</p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__badge" src="img/star.png" alt="" width="32" height="30">
+            <img class="card__badge card__badge--category" src="img/kvitka.png" alt="" width="32" height="30">
+            <img class="card__cover" src="img/na_dvox.jpg" alt="Обкладинка книги «Квартира на двох»" width="993" height="1600">
+
+            <div class="card__info">
+              <h3 class="card__title">Квартира на двох</h3>
+              <p class="card__author">Бет О'Лірі</p>
+              <p class="card__price">389 грн</p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <a class="card card--catalog" href="#">
+            <img src="img/book_plus.png" alt="" width="97" height="97">
+            <span>Весь каталог →</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Від цієї секції і нижче: усім фото додано loading="lazy" decoding="async" -->
+    <section class="categories" id="categories">
+      <div class="container">
+
+        <p class="chapter-label">Глава 2</p>
+        <h2 class="section-title">Обирай історію</h2>
+
+        <div class="category">
+
+          <div class="category__header">
+            <h3 class="category__title">
+              <img src="img/kvitka.png" alt="" width="32" height="30">
+              Ніжність
+            </h3>
+            <a class="category__more" href="#">усі книги →</a>
+          </div>
+
+          <div class="cards">
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/kvitka.png" alt="" width="32" height="30">
+              <img class="card__cover" src="img/odnochasno.jpg" alt="Обкладинка книги «Були в мережі одночасно»" width="1503" height="2401" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Були в мережі одночасно</h4>
+                <p class="card__author">Леся Яцута</p>
+                <p class="card__price">390 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/kvitka.png" alt="" width="32" height="30">
+              <img class="card__cover" src="img/teoretuchno.jpg" alt="Обкладинка книги «Теоретично це кохання»" width="218" height="340" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Теоретично це кохання</h4>
+                <p class="card__author">Алі Гейзелвуд</p>
+                <p class="card__price">399 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/kvitka.png" alt="" width="32" height="30">
+              <img class="card__cover" src="img/na_horusonti.jpg" alt="Обкладинка книги «На горизонті - ти»" width="1798" height="2540" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">На горизонті - ти</h4>
+                <p class="card__author">Джесіка Джойс</p>
+                <p class="card__price">495 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="category">
+
+          <div class="category__header">
+            <h3 class="category__title">
+              <img src="img/vohnuk.png" alt="" width="23" height="30">
+              Пристрасть
+            </h3>
+            <a class="category__more" href="#">усі книги →</a>
+          </div>
+
+          <div class="cards">
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/vohnuk.png" alt="" width="23" height="30">
+              <img class="card__cover" src="img/pruncesa.png" alt="Обкладинка книги «Паперова принцеса»" width="515" height="800" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Паперова принцеса</h4>
+                <p class="card__author">Ерін Ватт</p>
+                <p class="card__price">479 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/vohnuk.png" alt="" width="23" height="30">
+              <img class="card__cover" src="img/twisted.jpg" alt="Обкладинка книги «Кохання серія Twisted»" width="968" height="1280" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Кохання серія Twisted</h4>
+                <p class="card__author">Ана Хван</p>
+                <p class="card__price">569 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/vohnuk.png" alt="" width="23" height="30">
+              <img class="card__cover" src="img/zahoputu_13.jpg" alt="Обкладинка книги «Захопити тринадцятого»" width="1540" height="2387" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Захопити тринадцятого</h4>
+                <p class="card__author">Хлої Волш</p>
+                <p class="card__price">590 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="category">
+
+          <div class="category__header">
+            <h3 class="category__title">
+              <img src="img/medal.png" alt="" width="26" height="30">
+              Спорт і кохання
+            </h3>
+            <a class="category__more" href="#">усі книги →</a>
+          </div>
+
+          <div class="cards">
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/medal.png" alt="" width="26" height="30">
+              <img class="card__cover" src="img/vushe_neba.png" alt="Обкладинка книги «Вище неба»" width="1000" height="1523" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Вище неба</h4>
+                <p class="card__author">Ліз Томфорд</p>
+                <p class="card__price">500 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/medal.png" alt="" width="26" height="30">
+              <img class="card__cover" src="img/yhoda.jpeg" alt="Обкладинка книги «Угода»" width="318" height="480" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Угода</h4>
+                <p class="card__author">Елль Кеннеді</p>
+                <p class="card__price">450 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/medal.png" alt="" width="26" height="30">
+              <img class="card__cover" src="img/mezhu.jpg" alt="Обкладинка книги «Перетнувши межу»" width="500" height="800" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Перетнувши межу</h4>
+                <p class="card__author">Сімона Солтані</p>
+                <p class="card__price">440 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="category">
+
+          <div class="category__header">
+            <h3 class="category__title">
+              <img src="img/molnya.png" alt="" width="23" height="30">
+              Від ворогів до кохання
+            </h3>
+            <a class="category__more" href="#">усі книги →</a>
+          </div>
+
+          <div class="cards">
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/molnya.png" alt="" width="23" height="30">
+              <img class="card__cover" src="img/stezhki.png" alt="Обкладинка книги «Сплетені стежки»" width="1024" height="1590" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Сплетені стежки</h4>
+                <p class="card__author">Девні Перрі</p>
+                <p class="card__price">549 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/molnya.png" alt="" width="23" height="30">
+              <img class="card__cover" src="img/i_hotila_skazata.jpg" alt="Обкладинка книги «Те, що я хотіла сказати»" width="1712" height="2480" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Те, що я хотіла сказати</h4>
+                <p class="card__author">Моніка Мерфі</p>
+                <p class="card__price">690 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+            <article class="card card--large">
+              <img class="card__badge" src="img/molnya.png" alt="" width="23" height="30">
+              <img class="card__cover" src="img/danbrudh.jpg" alt="Обкладинка книги «Академія Данбридж»" width="581" height="840" loading="lazy" decoding="async">
+
+              <div class="card__info">
+                <h4 class="card__title">Академія Данбридж</h4>
+                <p class="card__author">Сара Шпрінц</p>
+                <p class="card__price">640 грн</p>
+                <a class="card__link" href="#">Купити →</a>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="recommend" id="recommend">
+      <div class="container">
+
+        <p class="chapter-label">Глава 3</p>
+        <h2 class="section-title">Твоя наступна історія</h2>
+
+        <div class="recommend__inner">
+
+          <div class="recommend__text">
+            <p class="recommend__label">Персональний підбір</p>
+            <h3 class="recommend__title">
+              Знайди свою<br>наступну книгу
+            </h3>
+            <p class="recommend__desc">
+              Скажи нам, яка книга тобі сподобалась — і ми підберемо схожу за настроєм, сюжетом чи героями.
+            </p>
+            <p class="recommend__desc">
+              Більше не доведеться гадати, що читати далі.
+            </p>
+          </div>
+
+          <div class="recommend__box">
+
+            <form class="recommend__form" action="#" method="post">
+              <h3 class="recommend__question">Яка історія тобі сподобалась?</h3>
+
+              <label class="visually-hidden" for="book-title">Назва книги</label>
+              <input class="recommend__input" type="text" id="book-title" name="book-title"
+                     placeholder="Назва книги" autocomplete="off" required minlength="2">
+
+              <label class="visually-hidden" for="book-author">Автор книги</label>
+              <input class="recommend__input" type="text" id="book-author" name="book-author"
+                     placeholder="Автор книги" autocomplete="off">
+
+              <label class="visually-hidden" for="book-mood">Настрій наступної книги</label>
+              <select class="recommend__input recommend__select" id="book-mood" name="book-mood">
+                <option value="">Будь-який настрій</option>
+                <option value="tenderness">Ніжність</option>
+                <option value="passion">Пристрасть</option>
+                <option value="sport">Спорт і кохання</option>
+                <option value="enemies">Від ворогів до кохання</option>
+              </select>
+
+              <button class="recommend__button" type="submit">Підібрати історію</button>
+            </form>
+
+            <div class="recommend__result" aria-live="polite">
+              <p class="recommend__result-text">Підбираємо історію</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="promo" id="promo">
+      <div class="container">
+
+        <p class="chapter-label">Глава 4</p>
+        <h2 class="section-title">Спецпропозиції</h2>
+
+        <div class="cards">
+
+          <article class="card">
+            <img class="card__badge" src="img/sale.png" alt="" width="30" height="30">
+            <img class="card__badge card__badge--category" src="img/vohnuk.png" alt="" width="23" height="30">
+            <img class="card__cover" src="img/dzvinok.jpg" alt="Обкладинка книги «Дзвінок для пробудження»" width="1528" height="2388" loading="lazy" decoding="async">
+
+            <div class="card__info">
+              <h3 class="card__title">Дзвінок для пробудження</h3>
+              <p class="card__author">Бет О'Лірі</p>
+              <p class="card__price card__price--sale">
+                <span class="card__discount">-20%</span>
+                <s class="card__old-price">535</s>
+                <span>449 грн</span>
+              </p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__badge" src="img/sale.png" alt="" width="30" height="30">
+            <img class="card__badge card__badge--category" src="img/kvitka.png" alt="" width="32" height="30">
+            <img class="card__cover" src="img/pisla_tebe.jpg" alt="Обкладинка книги «Після тебе»" width="717" height="1024" loading="lazy" decoding="async">
+
+            <div class="card__info">
+              <h3 class="card__title">Після тебе</h3>
+              <p class="card__author">Джоджо Мойєс</p>
+              <p class="card__price card__price--sale">
+                <span class="card__discount">-35%</span>
+                <s class="card__old-price">245</s>
+                <span>159 грн</span>
+              </p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__badge" src="img/sale.png" alt="" width="30" height="30">
+            <img class="card__badge card__badge--category" src="img/vohnuk.png" alt="" width="23" height="30">
+            <img class="card__cover" src="img/narecheni.jpg" alt="Обкладинка книги «Випадкові наречені»" width="777" height="1207" loading="lazy" decoding="async">
+
+            <div class="card__info">
+              <h3 class="card__title">Випадкові наречені</h3>
+              <p class="card__author">Крістіна Лорен</p>
+              <p class="card__price card__price--sale">
+                <span class="card__discount">-35%</span>
+                <s class="card__old-price">349</s>
+                <span>229 грн</span>
+              </p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__badge" src="img/sale.png" alt="" width="30" height="30">
+            <img class="card__badge card__badge--category" src="img/kvitka.png" alt="" width="32" height="30">
+            <img class="card__cover" src="img/ray.png" alt="Обкладинка книги «Проблема раю»" width="467" height="732" loading="lazy" decoding="async">
+
+            <div class="card__info">
+              <h3 class="card__title">Проблема раю</h3>
+              <p class="card__author">Крістіна Лорен</p>
+              <p class="card__price card__price--sale">
+                <span class="card__discount">-20%</span>
+                <s class="card__old-price">499</s>
+                <span>399 грн</span>
+              </p>
+              <a class="card__link" href="#">Купити →</a>
+            </div>
+          </article>
+
+          <a class="card card--catalog" href="#">
+            <img src="img/book_plus.png" alt="" width="97" height="97">
+            <span>Весь каталог →</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="container">
+
+        <p class="chapter-label">Глава 5</p>
+        <h2 class="section-title">Що кажуть закохані</h2>
+
+        <div class="reviews__list">
+
+          <article class="review">
+            <h3 class="review__name">Софія</h3>
+            <p class="review__text">
+              Зайшла просто подивитися новинки, а в підсумку зависла на годину! Тепер мій стос непрочитаних книг зріс утричі.
+            </p>
+            <div class="review__rating" role="img" aria-label="Оцінка 4 з 5">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/empty_heart.png" alt="" width="28" height="25">
+            </div>
+          </article>
+
+          <article class="review review--large">
+            <h3 class="review__name">Марта</h3>
+            <p class="review__text">
+              Функція підбору влучила просто в серденько — тепер усіма улюбленими історіями ділюся з подругами
+            </p>
+            <div class="review__rating" role="img" aria-label="Оцінка 4 з 5">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/empty_heart.png" alt="" width="28" height="25">
+            </div>
+          </article>
+
+          <article class="review">
+            <h3 class="review__name">Катерина</h3>
+            <p class="review__text">
+              Прийшла за однією конкретною книгою про кохання, а забрала одразу п'ять!
+            </p>
+            <div class="review__rating" role="img" aria-label="Оцінка 4 з 5">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/full_heart.png" alt="" width="27" height="25">
+              <img src="img/empty_heart.png" alt="" width="28" height="25">
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+
+        <p class="chapter-label">Глава 6</p>
+        <h2 class="section-title">Наша історія</h2>
+
+        <div class="about__inner">
+
+          <img class="about__bed" src="img/bed.png" alt="" width="696" height="604" loading="lazy" decoding="async">
+
+          <div class="about__card">
+            <img class="about__stamp" src="img/mark.png" alt="" width="100" height="100">
+
+            <p class="about__text">
+              Все почалося з любові до книг, які змушують серце битися швидше.
+            </p>
+            <p class="about__text">
+              Ми створили це місце для тих, хто вірить, що правильна книга може змінити настрій, вечір чи навіть день.
+            </p>
+            <p class="about__text">
+              Ми самі — читачі, перш ніж стати командою. Тому кожну книгу в каталозі обираємо так, ніби радимо її найкращій подрузі.
+            </p>
+
+            <p class="about__signature">— Between the Lines</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pricing" id="club">
+      <div class="container">
+
+        <p class="chapter-label">Глава 7</p>
+        <h2 class="section-title">Книжковий клуб</h2>
+        <p class="pricing__lead">Обирай пакет — і щомісяця отримуй історії, підібрані під твій настрій.</p>
+
+        <div class="info-cards">
+
+          <article class="info-card">
+            <span class="info-card__icon">
+              <img src="img/sale.png" alt="" width="30" height="30" loading="lazy" decoding="async">
+            </span>
+            <h3 class="info-card__title">Знижка на каталог</h3>
+            <p class="info-card__text">Постійна знижка на всі книги й спецпропозиції для учасників клубу.</p>
+            <span class="info-card__value">до −15%</span>
+          </article>
+
+          <article class="info-card">
+            <span class="info-card__icon">
+              <img src="img/molnya.png" alt="" width="23" height="30" loading="lazy" decoding="async">
+            </span>
+            <h3 class="info-card__title">Безкоштовна доставка</h3>
+            <p class="info-card__text">Нова пошта без оплати з першого замовлення кожного місяця.</p>
+            <span class="info-card__value">0 грн</span>
+          </article>
+
+          <article class="info-card">
+            <span class="info-card__icon">
+              <img src="img/kvitka.png" alt="" width="32" height="30" loading="lazy" decoding="async">
+            </span>
+            <h3 class="info-card__title">Книга під настрій</h3>
+            <p class="info-card__text">Ми підбираємо історію так, ніби радимо її найкращій подрузі.</p>
+            <span class="info-card__value">1–4 книги на місяць</span>
+          </article>
+
+        </div>
+
+        <div class="pricing__grid">
+
+          <article class="plan">
+            <h3 class="plan__name">Читач</h3>
+            <p class="plan__desc">Для тих, хто читає неспішно.</p>
+            <p class="plan__price">199 <span>грн / міс</span></p>
+            <ul class="plan__list">
+              <li>1 книга на місяць</li>
+              <li>Підбір за вашим настроєм</li>
+              <li>Знижка 5% на каталог</li>
+            </ul>
+            <a class="btn btn--ghost-light plan__btn" href="#feedback">Обрати «Читач»</a>
+          </article>
+
+          <article class="plan plan--featured">
+            <span class="plan__badge">Найпопулярніший</span>
+            <h3 class="plan__name">Закоханий</h3>
+            <p class="plan__desc">Двічі на місяць нові історії.</p>
+            <p class="plan__price">349 <span>грн / міс</span></p>
+            <ul class="plan__list">
+              <li>2 книги на місяць</li>
+              <li>Безкоштовна доставка</li>
+              <li>Знижка 10% на каталог</li>
+              <li>Закладка в подарунок</li>
+            </ul>
+            <a class="btn btn--light plan__btn" href="#feedback">Обрати «Закоханий»</a>
+          </article>
+
+          <article class="plan">
+            <h3 class="plan__name">Колекціонер</h3>
+            <p class="plan__desc">Ексклюзивний набір для справжніх колекціонерів.</p>
+            <p class="plan__price">599 <span>грн / міс</span></p>
+            <ul class="plan__list">
+              <li>4 книги на місяць</li>
+              <li>Ексклюзивні видання</li>
+              <li>Безкоштовна доставка</li>
+              <li>Знижка 15% на каталог</li>
+            </ul>
+            <button class="btn btn--light plan__btn" type="button" disabled>Місць немає</button>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="feedback" id="feedback">
+      <div class="container">
+
+        <p class="chapter-label">Глава 8</p>
+        <h2 class="section-title">Напишіть нам</h2>
+
+        <div class="feedback__box">
+
+          <form class="contact-form" action="https://formspree.io/f/mgakvzpq" method="post">
+
+            <input type="hidden" name="_subject" value="Заявка з сайту Between the Lines">
+
+            <!-- Пастка для спам-ботів: людина це поле не бачить -->
+            <div class="visually-hidden" aria-hidden="true">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+
+
+            <fieldset class="contact-form__group">
+              <legend class="contact-form__legend">Ваші дані</legend>
+
+              <div class="contact-form__grid">
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-name">Ім'я</label>
+                  <input class="contact-form__input" type="text" id="contact-name" name="name"
+                         placeholder="Як до вас звертатися" autocomplete="name"
+                         required minlength="2" maxlength="60">
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-email">Email</label>
+                  <input class="contact-form__input" type="email" id="contact-email" name="email"
+                         placeholder="name@example.com" autocomplete="email" required>
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-phone">Телефон</label>
+                  <input class="contact-form__input" type="tel" id="contact-phone" name="phone"
+                         placeholder="+380971234567" autocomplete="tel"
+                         pattern="\+?[0-9]{10,13}"
+                         title="Введіть номер у форматі +380971234567">
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-topic">Тема звернення</label>
+                  <select class="contact-form__input" id="contact-topic" name="topic" required>
+                    <option value="" selected disabled>Оберіть тему</option>
+                    <option value="book">Питання про книгу</option>
+                    <option value="order">Питання про замовлення</option>
+                    <option value="delivery">Доставка й оплата</option>
+                    <option value="other">Інше</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="contact-form__group">
+              <legend class="contact-form__legend">Ваше повідомлення</legend>
+
+              <div class="contact-form__field">
+                <label class="contact-form__label" for="contact-message">Текст повідомлення</label>
+                <textarea class="contact-form__input contact-form__textarea" id="contact-message"
+                          name="message" rows="5" minlength="10" maxlength="1000"
+                          placeholder="Напишіть, чим ми можемо допомогти" required></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="contact-form__group contact-form__group--inline">
+              <legend class="contact-form__legend">Як з вами зв'язатися?</legend>
+
+              <div class="contact-form__radios">
+                <div class="contact-form__radio">
+                  <input type="radio" id="reply-email" name="reply" value="email" checked>
+                  <label for="reply-email">Email</label>
+                </div>
+                <div class="contact-form__radio">
+                  <input type="radio" id="reply-phone" name="reply" value="phone">
+                  <label for="reply-phone">Телефон</label>
+                </div>
+                <div class="contact-form__radio">
+                  <input type="radio" id="reply-instagram" name="reply" value="instagram">
+                  <label for="reply-instagram">Instagram</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="contact-form__agree">
+              <input type="checkbox" id="contact-agree" name="agree" value="yes" required>
+              <label for="contact-agree">Погоджуюсь на обробку персональних даних</label>
+            </div>
+
+            <button class="contact-form__button" type="submit">Надіслати</button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container">
+
+      <p class="chapter-label">Глава остання</p>
+      <h2 class="section-title">Поговоримо</h2>
+
+      <p class="footer__text">
+        Є питання про книгу чи замовлення?<br>
+        Ми завжди на зв'язку.
+      </p>
+
+      <ul class="footer__contacts">
+        <li class="footer__contact">
+          <span class="footer__label">Email</span>
+          <a class="footer__value" href="mailto:hello@btlbooks.com">hello@btlbooks.com</a>
+        </li>
+        <li class="footer__contact">
+          <span class="footer__label">Телефон</span>
+          <a class="footer__value" href="tel:+380973024912">+380 97 302 4912</a>
+        </li>
+        <li class="footer__contact">
+          <span class="footer__label">Instagram</span>
+          <a class="footer__value" href="https://instagram.com/btl.books" target="_blank" rel="noopener">@btl.books</a>
+        </li>
+      </ul>
+
+    </div>
+  </footer>
+
+</body>
+</html>
